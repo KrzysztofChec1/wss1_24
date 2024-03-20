@@ -1,14 +1,19 @@
 
+
+
 lubi(j,p).
 lubi(p,k).
 lubi(p,j).
-lubi(j,b).
-lubi(b,j).
 lubi(jan, anna).
 lubi(anna, jan).
 lubi(piotr, sara).
 lubi(sara, piotr).
 
+lubi(darek,marek).
+lubi(marek,darek).
+lubi(darek,marcin).
+lubi(marcin,darek).
+lubi(jan,darek).
 
 niep(X,Y):-
     lubi(X,Y);
@@ -37,6 +42,8 @@ plec(jan, male).
 plec(anna, female).
 plec(peter, male).
 plec(sara, female).
+plec(marek, male).
+plec(darek, male).
 
 
 przyjazn(X,Y) :-
@@ -44,8 +51,8 @@ przyjazn(X,Y) :-
     lubi(Y,X).
 
 loves(X,Y) :-
-    \+(przyjazn(X,W \= Y)),
-    \+(przyjazn(Y,W \= X)),
+    \+ (przyjazn(X,Z), Z \= Y),
+    \+ (przyjazn(Y,Z), Z \= X),
     \+(X = Y),
     przyjazn(X,Y).
 
