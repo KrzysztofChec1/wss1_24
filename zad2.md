@@ -66,12 +66,16 @@ true_love(X,Y) :-
 
 `
 
-#zad 1
-###A: Rodzenstwo
-###B: Kuzyni
-###C: Dziakowie
-###D: Rodzic przyrodni/macocha/ojczym
-###E
+# zad 1
+### A:
+Rodzenstwo
+### B:
+Kuzyni
+### C:
+Dziakowie
+### D:
+Rodzic przyrodni/macocha/ojczym
+### E
 
     
 
