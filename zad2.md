@@ -1,6 +1,6 @@
 
 
-
+`
 lubi(j,p).
 lubi(p,k).
 lubi(p,j).
@@ -64,8 +64,14 @@ true_love(X,Y) :-
     plec(X, female),
     plec(Y, male).
 
+`
 
-
+#zad 1
+###A: Rodzenstwo
+###B: Kuzyni
+###C: Dziakowie
+###D: Rodzic przyrodni/macocha/ojczym
+###E
 
     
 
