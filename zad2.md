@@ -1,7 +1,7 @@
 
 
-%
-lubi(j,p).
+
+```lubi(j,p).
 lubi(p,k).
 lubi(p,j).
 lubi(jan, anna).
@@ -64,7 +64,7 @@ true_love(X,Y) :-
     plec(X, female),
     plec(Y, male).
 
-%
+```
 
 # zad 1
 ### A:
