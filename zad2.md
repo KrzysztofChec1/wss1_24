@@ -76,6 +76,16 @@ Dziakowie
 ### D:
 Rodzic przyrodni/macocha/ojczym
 ### E
+Rodzenstwo przyrodnie
+### F
+Szwagier/bratowa
+### G
+Brat z watpliwego malzenstwa
+
+## zad 1_2
+
+# zad 2
+
 
     
 
