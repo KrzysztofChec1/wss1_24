@@ -94,6 +94,14 @@ corka(X,Y) :- kobieta(X),rodzic(Y,X).
 brat_rodzony(X,Y) :- mezczyzna(X),rodzic(Z,X),rodzic(Z,Y),X \= Y.
 brat_przyrodni(X,Y) :- rodzic(Z,X),rodzic(W,Y),mezczyzna(X), X != Y , W != Z.
 kuzyn(X,Y):- rodzic(Z,X),rodzic(W,Y) ,brat_rodzony(Z,W),mezczyzna(X).
+dziadek_od_strony_ojca(X,Y):- rodzic(X,Z),rodzic(Z,Y),mezczyzna(Z),mezczyzna(X).
+dziadek_od_strony_matki(X,Y):- rodzic(X,Z),rodzic(Z,Y),kobieta(Z),mezczyzna(X).
+dziadek(X,Y) :- rodzic(X,Z),rodzic(Z,Y),mezczyzna(X).
+babcia(X,Y) :- :- rodzic(X,Z),rodzic(Z,Y),kobieta(X).
+wnuczka(X,Y) :- babcia(Y,X),kobieta(X).
+przodek_do2pokolenia_wstecz(X, Y) :- rodzic(X, Z), rodzic(Z, Y).
+przodek_do3pokolenia_wstecz(X, Y) :- rodzic(X, Z), przodek_do2pokolenia_wstecz(Z, Y).  
+
 
 ```
     
