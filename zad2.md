@@ -86,7 +86,16 @@ Brat z watpliwego malzenstwa
 
 # zad 2
 
+```
+kobieta(X) :- osoba(X),\+mezczyzna(X).
+ojciec(X,Y) :- mezczyzna(X) , rodzic(X,Y).
+matka(X,Y):-kobieta(X),rodzic(X,Y).
+corka(X,Y) :- kobieta(X),rodzic(Y,X).
+brat_rodzony(X,Y) :- mezczyzna(X),rodzic(Z,X),rodzic(Z,Y),X \= Y.
+brat_przyrodni(X,Y) :- rodzic(Z,X),rodzic(W,Y),mezczyzna(X), X != Y , W != Z.
+kuzyn(X,Y):- rodzic(Z,X),rodzic(W,Y) ,brat_rodzony(Z,W),mezczyzna(X).
 
+```
     
 
 
