@@ -173,6 +173,15 @@ d) Odpowiedź na pytanie, jakie pożywienie je Basia:
 ?- je(basia, X).
 ```
 
+```
+urodzony(markus, 40).
+max_wiek(150).
+zyje(X, Y2) :- urodzony(X, Y1), max_wiek(MaxWiek), Y2 - Y1 =< MaxWiek.
+
+
+?- zyje(markus, 2021).
+```
+
 
 
 
