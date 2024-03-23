@@ -107,7 +107,8 @@ przodek_do3pokolenia_wstecz(X, Y) :- rodzic(X, Z), przodek_do2pokolenia_wstecz(Z
 
 ### zad 2_Dla_Chetnych
 
-```a) Przedstawienie stwierdzeń w języku logiki predykatów:
+```
+a) Przedstawienie stwierdzeń w języku logiki predykatów:
 
 czlowiek(markus).
 pompejanczyk(markus).
