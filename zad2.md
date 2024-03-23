@@ -104,8 +104,41 @@ przodek_do3pokolenia_wstecz(X, Y) :- rodzic(X, Z), przodek_do2pokolenia_wstecz(Z
 
 
 ```
-    
 
+### zad 2_Dla_Chetnych
+
+```a) Przedstawienie stwierdzeń w języku logiki predykatów:
+
+czlowiek(markus).
+pompejanczyk(markus).
+rzymianin(X) :- pompejanczyk(X).
+wladca(cezar).
+lojalny(X, cezar) :- rzymianin(X), \+ nienawidzi(X, cezar).
+nienawidzi(X, cezar) :- rzymianin(X), \+ lojalny(X, cezar).
+lojalny(X, Y) :- czlowiek(X), czlowiek(Y).
+probuje_zamachu(X, Y) :- czlowiek(X), wladca(Y), \+ lojalny(X, Y).
+probuje_zamachu(markus, cezar).
+
+b) Czy Markus był lojalny wobec Cezara?
+
+?- lojalny(markus, cezar).
+
+c) Formuły w postaci koniunkcyjnej normalnej (CNF):
+
+czlowiek(markus).
+pompejanczyk(markus).
+rzymianin(X) :- pompejanczyk(X).
+wladca(cezar).
+lojalny(X, cezar) :- rzymianin(X), \+ nienawidzi(X, cezar).
+nienawidzi(X, cezar) :- rzymianin(X), \+ lojalny(X, cezar).
+lojalny(X, Y) :- czlowiek(X), czlowiek(Y).
+probuje_zamachu(X, Y) :- czlowiek(X), wladca(Y), \+ lojalny(X, Y).
+probuje_zamachu(markus, cezar).
+
+d) Dowód metodą rezolucji:
+
+?- \+ (lojalny(markus, cezar), probuje_zamachu(markus, cezar)).
+```
 
 
 
