@@ -1,7 +1,8 @@
 
 
 
-```lubi(j,p).
+```
+lubi(j,p).
 lubi(p,k).
 lubi(p,j).
 lubi(jan, anna).
@@ -143,7 +144,34 @@ d) Dowód metodą rezolucji:
 
 
 
+```
+a) Wyrażenie zdań w języku logiki predykatów:
 
+1. lubi(jan, X) :- pozywienie(X).
+2. pozywienie(jablka).
+3. pozywienie(kurczak).
+4. pozywienie(X) :- je(Y, X), zyje(Y).
+5. je(adam, orzeszki), zyje(adam).
+6. je(basia, X) :- je(adam, X).
+
+b) Przekształcenie formuł do postaci koniunkcyjnej normalnej (CNF):
+
+1. lubi(jan, X) :- pozywienie(X).
+2. pozywienie(jablka).
+3. pozywienie(kurczak).
+4. pozywienie(X) :- je(Y, X), zyje(Y).
+5. je(adam, orzeszki).
+6. zyje(adam).
+7. je(basia, X) :- je(adam, X).
+
+c) Udowodnienie, że Jan lubi orzeszki:
+
+?- lubi(jan, orzeszki).
+
+d) Odpowiedź na pytanie, jakie pożywienie je Basia:
+
+?- je(basia, X).
+```
 
 
 
